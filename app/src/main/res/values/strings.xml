@@ -1,0 +1,57 @@
+<resources>
+    <string name="title_home">Home</string>
+    <string name="title_localization">Localização</string>
+    <string name="title_adocao">Adoção</string>
+    <string name="title_doacao">Doação</string>
+    <string name="historia">Sobre Nós</string>
+    <string name="texto_historia">Em um pequeno bairro, um grupo de amigos unidos pela paixão por animais decidiu transformar a realidade dos cães e gatos abandonados. Com muito amor e dedicação, eles fundaram a ONG \'Amigos da Vizinhança\', que rapidamente se tornou um refúgio para aqueles que mais precisavam. Através de ações como castração, vacinação e adoção responsável, a ONG resgatou milhares de vidas e transformou a vida de muitas pessoas.</string>
+    <string name="app_name">Friends</string>
+    <string name="login">Entrar</string>
+    <string name="email">Email</string>
+    <string name="senha">Senha</string>
+    <string name="sem_registro">Não tenho registro.</string>
+    <string name="esqueci_a_senha">Esqueci a senha</string>
+    <string name="registro">Registre-se</string>
+    <string name="repita_senha">Repita a senha</string>
+    <string name="endereco">Endereço</string>
+    <string name="telefone">Telefone</string>
+    <string name="nome_completo">Nome Completo</string>
+    <string name="registrar">Registrar-se</string>
+    <string name="animais_adocao">Adote</string>
+    <string name="adote_um_cachorro">Adote um Cachorro</string>
+    <string name="adote_um_gato">Adote um Gato</string>
+    <string name="localiza">Nos mande a Localização de onde esta o Animal em perigo.</string>
+    <string name="donation">Faça sua Doação</string>
+    <string name="bem_vindo">Bem-Vindo!</string>
+    <string name="criar_conta">Criar conta</string>
+    <string name="nao_possui">Não possui uma conta?</string>
+    <string name="possui">Já possui uma conta?</string>
+    <string name="nome">Nome</string>
+
+    <string-array name="age_array">
+        <item>dias</item>
+        <item>meses</item>
+        <item>anos</item>
+    </string-array>
+
+    <string-array name="age2_array">
+        <item>dia</item>
+        <item>mês</item>
+        <item>ano</item>
+    </string-array>
+    <string-array name="gender_array">
+        <item>macho</item>
+        <item>fêmea</item>
+    </string-array>
+
+    <string-array name="kids_array">
+        <item>Aceita crianças:</item>
+        <item>Não aceita crianças:</item>
+    </string-array>
+
+    <string-array name="pet_array">
+        <item>Aceita outros animais:</item>
+        <item>Não aceita outros animais:</item>
+    </string-array>
+</resources>
+

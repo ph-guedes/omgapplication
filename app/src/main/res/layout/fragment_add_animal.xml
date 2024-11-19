@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    tools:context=".ui.panel.ControlPanelActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <FrameLayout
+        android:id="@+id/layoutPhoto"
+        android:layout_width="0dp"
+        android:layout_height="224dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonGroup">
+
+        <ImageView
+            android:id="@+id/photoFrame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/border_bg"
+            android:contentDescription="Moldura"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_camera"
+            app:tint="@color/lightGrey" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/animalImage2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/RoundedImage3" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textViewNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/adlam_display2"
+        android:text="Nome do Animal:"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/buttonGroup" />
+
+    <EditText
+        android:id="@+id/editTextNome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="10dp"
+        android:hint="Nome ou Raça"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/textHint"
+        android:maxLength="20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/textViewNome" />
+
+    <TextView
+        android:id="@+id/textViewIdade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/adlam_display2"
+        android:text="Idade:"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/editTextNome" />
+
+    <EditText
+        android:id="@+id/editTextIdade"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:hint="Idade"
+        android:inputType="number"
+        android:textColorHint="@color/textHint"
+        android:maxLength="2"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/textViewIdade" />
+
+    <Spinner
+        android:id="@+id/ageSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/editTextIdade"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/editTextIdade"
+        app:layout_constraintTop_toBottomOf="@id/textViewIdade" />
+
+    <TextView
+        android:id="@+id/textViewGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/adlam_display2"
+        android:text="Gênero:"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/editTextIdade" />
+
+    <Spinner
+        android:id="@+id/spinnerGender"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/textViewGender" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/buttonGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="#F8F8F8"
+        android:elevation="0dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_dog"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_selector"
+            android:drawableStart="@drawable/ic_dog"
+            android:drawableTint="@color/animal_item_color"
+            android:elevation="0dp"
+            android:fontFamily="@font/adlam_display2"
+            android:padding="8dp"
+            android:paddingStart="16dp"
+            android:text="Cão"
+            android:textColor="@color/animal_item_color"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="Ícone de Pata"
+            android:src="@drawable/ic_paw" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_cat"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_selector"
+            android:drawableStart="@drawable/ic_cat"
+            android:drawableTint="@color/animal_item_color"
+            android:elevation="0dp"
+            android:fontFamily="@font/adlam_display2"
+            android:padding="8dp"
+            android:paddingStart="16dp"
+            android:text="Gato"
+            android:textColor="@color/animal_item_color"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/animalDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutPhoto">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="30dp">
+
+            <ImageView
+                android:id="@+id/primaryIcon"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/ic_info_bg"
+                android:scaleType="center"
+                android:src="@drawable/ic_kids"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/secondIcon"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/ic_info_bg"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_pets"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/primaryIcon" />
+
+            <ImageView
+                android:id="@+id/thirdIcon"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/ic_info_bg"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_lightning"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/secondIcon" />
+
+            <ImageView
+                android:id="@+id/fourthIcon"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/ic_info_bg"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_tree"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/thirdIcon" />
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/adlam_display2"
+                android:inputType="text"
+                android:textColor="@color/textColor"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="@id/primaryIcon"
+                app:layout_constraintStart_toEndOf="@id/primaryIcon"
+                app:layout_constraintTop_toTopOf="@id/primaryIcon"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="AutoFill" />
+
+            <EditText
+                android:id="@+id/description2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/adlam_display2"
+                android:inputType="text"
+                android:textColor="@color/textColor"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/secondIcon"
+                app:layout_constraintStart_toEndOf="@id/secondIcon"
+                app:layout_constraintTop_toTopOf="@id/secondIcon"
+                tools:ignore="Autofill" />
+
+            <EditText
+                android:id="@+id/description3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/adlam_display2"
+                android:inputType="text"
+                android:textColor="@color/textColor"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/thirdIcon"
+                app:layout_constraintStart_toEndOf="@id/thirdIcon"
+                app:layout_constraintTop_toTopOf="@id/thirdIcon"
+                tools:ignore="Autofill" />
+
+            <EditText
+                android:id="@+id/description4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/adlam_display2"
+                android:inputType="text"
+                android:textColor="@color/textColor"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="@id/fourthIcon"
+                app:layout_constraintStart_toEndOf="@id/fourthIcon"
+                app:layout_constraintTop_toTopOf="@id/fourthIcon"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="Autofill" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/buttonCadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/button_bg"
+        android:paddingHorizontal="16dp"
+        android:text="Cadastrar Animal"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/animalDetails" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

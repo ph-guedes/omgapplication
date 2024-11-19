@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.donation.DonationFragment">
+
+    <TextView
+        android:id="@+id/text_doacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_doacao"
+        android:textColor="@color/black"
+        android:fontFamily="@font/adlam_display2"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/callText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Uma realidade alarmante \nque pode ser mudada!"
+        android:textColor="@color/textColor"
+        android:fontFamily="@font/adlam_display2"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_marginTop="2dp"
+        app:layout_constraintTop_toBottomOf="@id/text_doacao"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/infoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/callText">
+
+        <ImageView
+            android:id="@+id/list_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="25dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/list_image"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tint="@color/textColor" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.358" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.72" />
+
+        <ImageView
+            android:id="@+id/firstIcon"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/icon_bg"
+            android:src="@drawable/ic_first_icon"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toTopOf="@id/guideline_top"
+            app:layout_constraintStart_toEndOf="@id/list_icon" />
+
+        <TextView
+            android:id="@+id/firstIconText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Educação pela causa, \ncampanhas de castração,\npalestras e atividade em \ncomunidades"
+            android:textColor="@color/textColor"
+            android:fontFamily="@font/adlam_display2"
+            android:textSize="15sp"
+            android:layout_marginStart="16dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/edit_text_border"
+            android:padding="12dp"
+            app:layout_constraintTop_toTopOf="@id/firstIcon"
+            app:layout_constraintStart_toEndOf="@id/firstIcon"/>
+
+        <ImageView
+            android:id="@+id/middleIcon"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/icon_bg"
+            android:src="@drawable/ic_middle_icon"
+            android:scaleType="center"
+            app:layout_constraintTop_toTopOf="@id/guideline_middle"
+            app:layout_constraintStart_toEndOf="@id/list_icon"/>
+
+        <TextView
+            android:id="@+id/middleIconText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lutando, pela reivindicaçao\nde direitos e implementação\nde políticas públicas de\nproteção aos animais"
+            android:textColor="@color/textColor"
+            android:fontFamily="@font/adlam_display2"
+            android:textSize="15sp"
+            android:layout_marginStart="16dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/edit_text_border"
+            android:padding="12dp"
+            app:layout_constraintTop_toTopOf="@id/middleIcon"
+            app:layout_constraintStart_toEndOf="@id/middleIcon"/>
+
+        <ImageView
+            android:id="@+id/lastIcon"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/icon_bg"
+            android:src="@drawable/ic_last_icon"
+            android:scaleType="center"
+            app:layout_constraintTop_toBottomOf="@id/guideline_bottom"
+            app:layout_constraintStart_toEndOf="@id/list_icon"/>
+
+        <TextView
+            android:id="@+id/lastIconText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resgate, acolhimento, \ntratamento e adoção de \nanimais"
+            android:textColor="@color/textColor"
+            android:fontFamily="@font/adlam_display2"
+            android:textSize="15sp"
+            android:layout_marginStart="16dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/edit_text_border"
+            android:padding="12dp"
+            app:layout_constraintTop_toTopOf="@id/lastIcon"
+            app:layout_constraintStart_toEndOf="@id/lastIcon"/>
+
+        <TextView
+            android:id="@+id/endText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ajude-nos a mudar isso"
+            android:textColor="@color/textColor"
+            android:fontFamily="@font/adlam_display2"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_marginTop="22dp"
+            app:layout_constraintTop_toBottomOf="@id/lastIconText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/donationType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/infoLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="8dp"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/buttonFoodDonation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:elevation="0dp"
+            android:text="Doação de Alimentos"
+            android:background="@drawable/food_donate_bg"
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/ic_food"
+            android:padding="12dp" />
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/buttonMoneyDonation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:elevation="0dp"
+            android:text="Doação Monetária"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/money_donate_bg"
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/ic_money"
+            android:padding="12dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

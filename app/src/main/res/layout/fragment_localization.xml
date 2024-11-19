@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="24dp"
+    android:paddingStart="30dp"
+    android:paddingEnd="30dp"
+    tools:context=".ui.localization.LocalizationFragment">
+
+    <TextView
+        android:id="@+id/textLocalization"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Relatar Animal"
+        android:textColor="@color/black"
+        android:fontFamily="@font/adlam_display2"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adicione imagem e a localização"
+        android:fontFamily="@font/adlam_display2"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/textLocalization"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="365dp" />
+
+    <FrameLayout
+        android:id="@+id/layoutCamera"
+        android:layout_width="260dp"
+        android:layout_height="320dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintTop_toBottomOf="@id/textAdd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/imageFrame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/border_bg"
+            android:src="@drawable/ic_camera"
+            android:contentDescription="Moldura"
+            android:scaleType="centerInside"
+            app:tint="@color/lightGrey" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imagePlaceholder"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:contentDescription="Imagem"
+            android:scaleType="fitXY"
+            app:shapeAppearanceOverlay="@style/RoundedImage" />
+
+        <ImageButton
+            android:id="@+id/buttonMap"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginStart="2dp"
+            android:background="@drawable/location_selector"
+            android:src="@drawable/ic_location"
+            android:contentDescription="Adicionar localização"
+            android:scaleType="centerInside" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/labelDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descrição:"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/adlam_display2"
+        android:layout_marginTop="32dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        app:layout_constraintTop_toBottomOf="@id/layoutCamera"
+        app:layout_constraintStart_toStartOf="@id/labelDescription"
+        app:layout_constraintEnd_toEndOf="@id/guideline" />
+
+    <EditText
+        android:id="@+id/editTextDescription"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:inputType="textMultiLine"
+        android:hint="(opcional)\nAdicione uma breve descrição da situação do animal."
+        android:textColor="@color/textHint"
+        android:textSize="16sp"
+        android:textColorHint="@color/textHint"
+        android:fontFamily="@font/adlam_display2"
+        android:background="@drawable/edit_text_border"
+        android:padding="8dp"
+        android:layout_marginTop="5dp"
+        android:gravity="top|start"
+        app:layout_constraintTop_toBottomOf="@id/labelDescription"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="@id/guideline" />
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:text="Enviar"
+        android:textColor="@color/white"
+        android:background="@drawable/button_bg"
+        app:layout_constraintTop_toBottomOf="@id/editTextDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

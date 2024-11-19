@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="14dp"
+    android:clipToPadding="false"
+    android:clipChildren="false">
+
+    <View
+        android:id="@+id/found"
+        android:layout_width="160dp"
+        android:layout_height="205dp"
+        android:background="@drawable/animal_item_bg"
+        android:elevation="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_animal"
+        android:layout_width="160dp"
+        android:layout_height="134dp"
+        android:src="@drawable/tesanimal"
+        android:elevation="8dp"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/AnimalImage"
+        app:layout_constraintTop_toTopOf="@id/found"
+        app:layout_constraintStart_toStartOf="@id/found"
+        app:layout_constraintEnd_toEndOf="@id/found" />
+
+    <TextView
+        android:id="@+id/nome_animal"
+        tools:text="Name"
+        android:textColor="@color/textColor"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:fontFamily="@font/adlam_display2"
+        android:elevation="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/image_animal"
+        app:layout_constraintStart_toStartOf="@+id/found"
+        app:layout_constraintEnd_toEndOf="@+id/found"/>
+
+    <TextView
+        android:id="@+id/genderAndAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Gênero, Idade"
+        android:textColor="@color/white"
+        android:textStyle="normal"
+        android:fontFamily="@font/adlam_display2"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:background="@drawable/button_bg"
+        android:paddingVertical="2dp"
+        android:paddingHorizontal="8dp"
+        android:elevation="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/nome_animal"
+        app:layout_constraintStart_toStartOf="@+id/found"
+        app:layout_constraintEnd_toEndOf="@id/found"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

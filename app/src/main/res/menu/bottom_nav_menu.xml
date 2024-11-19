@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/casa_24"
+        android:title="" />
+
+    <item
+        android:id="@+id/navigation_adoption"
+        android:icon="@drawable/adocao"
+        android:title="" />
+
+    <item
+        android:id="@+id/navigation_localization"
+        android:icon="@drawable/animal_locator_icon_black_white2"
+        android:title="" />
+
+    <item
+        android:id="@+id/navigation_donation"
+        android:icon="@drawable/heart_24"
+        android:title="" />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/profile_24"
+        android:title="" />
+
+</menu>

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageHeader"
+        android:layout_width="match_parent"
+        android:layout_height="204dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/blurimagemong"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/header_bg"
+        app:layout_constraintBottom_toBottomOf="@id/imageHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logoHeader"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerInside"
+        android:src="@drawable/logo_ong2"
+        app:layout_constraintBottom_toBottomOf="@id/imageHeader"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/logoSHeader"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerInside"
+        android:src="@drawable/logo_ong"
+        app:layout_constraintBottom_toBottomOf="@id/imageHeader"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        android:id="@+id/viewSupporter"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/imageHeader"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/login_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/viewSupporter">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/registerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            app:layout_constraintTop_toTopOf="parent" >
+
+            <TextView
+                android:id="@+id/textRWelcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:text="Criar uma conta"
+                android:textColor="@color/textColor"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/inputRName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@null"
+                android:hint="@string/nome"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:paddingStart="60dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/textColor"
+                android:textSize="15sp"
+                android:maxLength="20"
+                app:layout_constraintTop_toBottomOf="@id/textRWelcome"
+                tools:ignore="AutoFill" />
+
+            <View
+                android:id="@+id/viewRDividerName"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/textHint"
+                app:layout_constraintTop_toBottomOf="@id/inputRName" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_name2"
+                app:layout_constraintBottom_toBottomOf="@id/inputRName"
+                app:layout_constraintStart_toStartOf="@id/inputRName"
+                app:tint="@color/blue_dark" />
+
+            <EditText
+                android:id="@+id/inputREmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@null"
+                android:hint="@string/email"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:paddingStart="60dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/textColor"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/viewRDividerName"
+                tools:ignore="AutoFill" />
+
+            <View
+                android:id="@+id/viewRDividerEmail"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/textHint"
+                app:layout_constraintTop_toBottomOf="@id/inputREmail" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_email"
+                app:layout_constraintBottom_toBottomOf="@id/inputREmail"
+                app:layout_constraintStart_toStartOf="@id/inputREmail"
+                app:tint="@color/blue_dark" />
+
+            <EditText
+                android:id="@+id/inputRPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@null"
+                android:hint="@string/senha"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:paddingStart="60dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/textColor"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/viewRDividerEmail"
+                tools:ignore="AutoFill" />
+
+            <View
+                android:id="@+id/viewRDividerPass"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/textHint"
+                app:layout_constraintTop_toBottomOf="@id/inputRPass" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_lock"
+                app:layout_constraintBottom_toBottomOf="@id/inputRPass"
+                app:layout_constraintStart_toStartOf="@id/inputRPass"
+                app:tint="@color/blue_dark" />
+
+            <EditText
+                android:id="@+id/inputRepeatPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@null"
+                android:hint="@string/repita_senha"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:paddingStart="60dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/textColor"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/viewRDividerPass"
+                tools:ignore="AutoFill" />
+
+            <View
+                android:id="@+id/viewDividerRepeatPass"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/textHint"
+                app:layout_constraintTop_toBottomOf="@id/inputRepeatPass" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_lock"
+                app:layout_constraintBottom_toBottomOf="@id/inputRepeatPass"
+                app:layout_constraintStart_toStartOf="@id/inputRepeatPass"
+                app:tint="@color/blue_dark" />
+
+            <Button
+                android:id="@+id/registerRButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/button_bg"
+                android:text="@string/registrar"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerRepeatPass" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/viewRDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="50dp"
+            android:background="@color/lightGrey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/registerLayout" />
+
+        <TextView
+            android:id="@+id/textRCreateAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="5dp"
+            android:text="@string/possui"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toStartOf="@id/loginRButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewRDivider" />
+
+        <TextView
+            android:id="@+id/loginRButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="120dp"
+            android:text="@string/login"
+            android:textColor="@color/blue_dark"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textRCreateAccount"
+            app:layout_constraintTop_toBottomOf="@id/viewRDivider" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

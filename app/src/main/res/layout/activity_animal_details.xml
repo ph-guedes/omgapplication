@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/animalImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="12dp"
+        app:shapeAppearanceOverlay="@style/RoundedImage2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:tint="@color/white"
+        android:src="@drawable/ic_back"
+        app:layout_constraintTop_toTopOf="@id/animalImage"
+        app:layout_constraintStart_toStartOf="@id/animalImage"/>
+
+    <View
+        android:id="@+id/viewSupporter"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/login_bg"
+        android:backgroundTint="#F8F8F8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingTop="30dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        app:layout_constraintTop_toTopOf="@id/viewSupporter">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/animalInfo"
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="1dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/nome_animal"
+                    tools:text="Name"
+                    android:textColor="@color/textColor"
+                    android:textStyle="bold"
+                    android:textSize="26sp"
+                    android:fontFamily="@font/adlam_display2"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/genderAndAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Gênero, Idade"
+                    android:textColor="@color/white"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/adlam_display2"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:background="@drawable/button_bg"
+                    android:layout_marginStart="30dp"
+                    android:paddingVertical="2dp"
+                    android:paddingHorizontal="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/nome_animal"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/likeBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_heart_bg"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_heart_outlined"
+                    android:contentDescription="Like"
+                    android:layout_marginEnd="30dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/animalDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="1dp"
+            app:layout_constraintTop_toBottomOf="@id/animalInfo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="30dp">
+
+                <ImageView
+                    android:id="@+id/primaryIcon"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/ic_info_bg"
+                    android:src="@drawable/ic_kids"
+                    android:scaleType="center"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/secondIcon"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/ic_info_bg"
+                    android:src="@drawable/ic_pets"
+                    android:scaleType="centerInside"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintTop_toBottomOf="@id/primaryIcon"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/thirdIcon"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/ic_info_bg"
+                    android:src="@drawable/ic_lightning"
+                    android:scaleType="centerInside"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintTop_toBottomOf="@id/secondIcon"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/fourthIcon"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/ic_info_bg"
+                    android:src="@drawable/ic_tree"
+                    android:scaleType="centerInside"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintTop_toBottomOf="@id/thirdIcon"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Aceita crianças:"
+                    android:textColor="@color/textColor"
+                    android:textStyle="normal"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/adlam_display2"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintStart_toEndOf="@id/primaryIcon"
+                    app:layout_constraintTop_toTopOf="@id/primaryIcon"
+                    app:layout_constraintBottom_toBottomOf="@id/primaryIcon" />
+
+                <TextView
+                    android:id="@+id/description2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Aceita outros animais:"
+                    android:textColor="@color/textColor"
+                    android:textStyle="normal"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/adlam_display2"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintStart_toEndOf="@id/secondIcon"
+                    app:layout_constraintTop_toTopOf="@id/secondIcon"
+                    app:layout_constraintBottom_toBottomOf="@id/secondIcon" />
+
+                <TextView
+                    android:id="@+id/description3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="É tranquilo:"
+                    android:textColor="@color/textColor"
+                    android:textStyle="normal"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/adlam_display2"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintStart_toEndOf="@id/thirdIcon"
+                    app:layout_constraintTop_toTopOf="@id/thirdIcon"
+                    app:layout_constraintBottom_toBottomOf="@id/thirdIcon" />
+
+                <TextView
+                    android:id="@+id/description4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Precisa de mais espaço:"
+                    android:textColor="@color/textColor"
+                    android:textStyle="normal"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/adlam_display2"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintStart_toEndOf="@id/fourthIcon"
+                    app:layout_constraintTop_toTopOf="@id/fourthIcon"
+                    app:layout_constraintBottom_toBottomOf="@id/fourthIcon" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADOTAR ANIMAL"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/adlam_display2"
+            android:background="@drawable/button_bg"
+            android:backgroundTint="#FFA500"
+            android:paddingHorizontal="30dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/animalDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
